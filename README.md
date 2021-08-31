@@ -1,4 +1,4 @@
-# WE_Care_NGO_WEBSITE
+WE CARE
 
 • This is a NGO website made on Django backend and the frontend is made using JavaScript, CSS and HTML.
 
