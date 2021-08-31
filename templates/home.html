@@ -1,0 +1,373 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>We Care</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+ 
+</head>
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex">
+  
+        <div class="logo mr-auto">
+          <h1 class="text-light"><a href="/"><span><i class="bx-burst" style="font-size:xx-large;">WeCare</i></span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a hr
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>We Care</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+ 
+</head>
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex">
+  
+        <div class="logo mr-auto">
+          <h1 class="text-light"><a href="/"><span><i class="bx-burst" style="font-size:xx-large;">WeCare</i></span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+  
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li class="drop-down"><a href="">Donate</a>
+              <ul>
+                <li><a href="/Child">Child</a></li>
+                <li><a href="/Old">Senior Citizen</a></li>
+                <li><a href="/Health">Health</a></li>             
+              </ul>
+            </li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#verification">Verification</a></li>
+            {% if user.is_authenticated %}
+            <li class="drop-down"><a href="#">{{ user.first_name }}  {{ user.last_name }}</a>
+              <ul>
+              <li><a href="/ChangePassword">Change Password</a></li>
+              <li><a href="#">Donated: &#x20b9;{{user.amount_donated}}</a></li>
+              <li><a href="/cart">Your Donations</a></li>
+              <li><a href="/donorupd">Edit Personal Information</a></li>
+              <li><a href="/donorLogO">Log Out</a></li>
+              </ul>
+            </li>
+            {% else %}
+              <li><a href="/donorReg">Register</a></li>
+              <li><a href="/donorLog">Log In</a></li>  
+            {% endif %}
+            </ul>
+        </nav><!-- .nav-menu -->
+  
+      </div>
+    </header><!-- End Header -->
+  
+    
+<section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      {% include 'alets.html' %}
+      <h1>Welcome to WeCare</h1>
+      <h2>Charity brings to life again those who are spiritually dead.</h2>
+      <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="content col-xl-12 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+              <h3>About Us</h3>
+              <p>
+                We are a team of Computer Engineers who have made this website for the welfare of the people who do not get have even the basic needs of a human and urge everybody to support them.
+              </p>
+              <a href="/about" class="about-btn">About us <i class="bx bx-chevron-right"></i></a>
+            </div>
+          
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= We Serve ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>We Serve</h2>
+          <p>We try to reach </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up">
+             <h4 class="title"><a href="">Child</a></h4>
+              <p class="description">There are many children who are in homeless and family-less, we help them get the best possible services.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="title"><a href="">Senior Citizen</a></h4>
+              <p class="description">The people in their advancing years and have no support from their children due to various reasons are supported by us.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">              
+              <h4 class="title"><a href="">Health</a></h4>
+              <p class="description">We support the needy  patients who due to financial reasons are not able to get the required medical services.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts  section-bg">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-hand"></i>
+              <span data-toggle="counter-up">{{bless}}</span>
+              <p><strong>Feel Blessed</strong> <br>after donating</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-simple-smile"></i>
+              <span data-toggle="counter-up">{{donation}}</span>
+              <p><strong>Smiles</strong> <br>Spread after donating</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-live-support"></i>
+              <span data-toggle="counter-up">168</span>
+              <p><strong>Hours Of Support</strong><br>We are available 24x7</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-users-alt-5"></i>
+              <span data-toggle="counter-up">4</span>
+              <p><strong>Workers</strong><br> Though less yet efficient</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Call To Action</h3>
+          <p> The smallest of your donations can affect somebody's lives drastically so please open up your hearts and donate as much as possible.</p>       
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>The Needy</h2>
+          <p>List of all the needy</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-orphanage">Child</li>
+              <li data-filter=".filter-oldage">Senior Citizen</li>
+              <li data-filter=".filter-health">Health</li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          {% for need in needy %}
+            {% if need.category == "o" %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-oldage">
+                <div class="portfolio-wrap">
+                  <img src="{{ need.image.url }}" class="img-fluid" height="300px">
+                  <div class="portfolio-links">
+                    <a href="{% url 'Needy' need.id %}" title="More Details" style="font-family: Georgia;"></i><em>Click Here</em></a>
+                  </div>
+                </div>
+              </div>
+            {% elif need.category == "c" %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-orphanage">
+              <div class="portfolio-wrap">
+                <img src="{{ need.image.url }}" class="img-fluid" height="300px">
+                <div class="portfolio-links">
+                  <a href="{% url 'Needy' need.id %}" title="More Details" style="font-family: Georgia;"><em>Click Here</em></a>
+                </div>
+              </div>
+            </div>
+            {% elif need.category == "h" %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-health">
+              <div class="portfolio-wrap">
+                <img src="{{ need.image.url }}" class="img-fluid" height="300px">
+                <div class="portfolio-links">
+                  <a href="{% url 'Needy' need.id %}" title="More Details" style="font-family: Georgia;"><em>Click Here</em></a>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Verification Section ======= -->
+    <section id="verification" class="verification section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="50">
+          <h2>Verification</h2>
+          <p> All nonprofits listed on the platform are cleared for legal and compliance procedures. You can be assured that we make sure that they adhere to all the requirements as laid by the law.
+          ‘WeCare’ promise to you that we ensure your donations are being channelled to the program and organization of your choice.We will bring you the most reliable giving options.All non crowdfunding programs that we list have successfully cleared an exhaustive due diligence process covering legal, financial, and implementation aspects.We will give you regular updates on the programs that you donate to.</p>
+          <a href="/verification" class="verification-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+        </div>
+
+        
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="50">
+          <h2>Contact</h2>
+          <p>For any queries feel free to contact us.We thrive to do our best for our clients.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Shiv Nadar University<br>NH91, Tehsil Dadri, Greater Noida, Uttar Pradesh 201314</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>wecare@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+91-120-7170100<br>+91-120-2662002</p>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

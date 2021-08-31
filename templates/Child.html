@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<section style="padding: 100px 0;">
+    <div class="container">
+        {% include 'alets.html' %}
+        <h1 style="text-align: center;"><span class="badge badge-info">Child</span></h1>
+        <h5 class="text-white" style="padding:15px 10px; background-color:peru;  "><span style="font-family:Georgia, 'Times New Roman', Times, serif;">Children are the greatest treasure we can ever have. They are the future leaders of our country. Good children become good citizens too. It all depends on where they grow, the family background and the moral values with which they are brought up. God gave us for us so that we might bring them up with love and care and help them to achieve their best their lives. Though each vary with different temperaments but still they have greater po{% extends 'base.html' %}
+{% block content %}
+<section style="padding: 100px 0;">
+    <div class="container">
+        {% include 'alets.html' %}
+        <h1 style="text-align: center;"><span class="badge badge-info">Child</span></h1>
+        <h5 class="text-white" style="padding:15px 10px; background-color:peru;  "><span style="font-family:Georgia, 'Times New Roman', Times, serif;">Children are the greatest treasure we can ever have. They are the future leaders of our country. Good children become good citizens too. It all depends on where they grow, the family background and the moral values with which they are brought up. God gave us for us so that we might bring them up with love and care and help them to achieve their best their lives. Though each vary with different temperaments but still they have greater potentials within them which needs to be tapped and brought out. They have to be shaped and carved so that they can be good citizens later on.</span></h5>
+        <div class="card-columns">
+                {% if needy %}
+                {% for need in needy %}
+                <div class="card">
+                <img class="card-img-top" src="{{ need.image.url }}" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">{{ need.name }}</h3>
+                  <h5 class="card-title">by {{ need.organization}}</h5>
+                  <p class="card-text">No. of people affected: {{need.no_of_people}} <br> Address: {{need.address}}  <br> Amount Needed: {{need.total_amount}}</p>
+                  <a class="card-text btn btn-outline-primary" href="{% url 'Needy' need.id %}" >More Details</a>
+                </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No Needy Present</p>
+                {% endif %}    
+        </div>
+    </div>
+</section>
+
+{% endblock %}

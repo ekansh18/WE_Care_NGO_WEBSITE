@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Contact Us</h1>
+{% endblock %}{% extends 'base.html' %}
+{% block content %}
+{% include 'alets.html' %}
+<section style="padding: 100px 0;">
+    <div class="container" style="width: 600px;">
+        <div class="btn-outline-info badge" style="opacity: 0.7;">
+            <h1>Donate Here for {{needy.name}}</h1>
+            <h3>By {{needy.organization}}</h3>
+        </div>
+    <form action="" method="POST" style="padding-top: 15px;"> {% csrf_token %}
+        <div class="form-group">
+            <label for="user_name">User Name:</label>
+            <input type="text" id="user_name" name="user_name" value="{{ user.first_name }}">
+        </div>
+        <div class="form-group">
+            <label for="amount_month">Amount to Donate:</label>
+            <input type="number" id="amount_month" name="amount_month">
+        </div>
+        <input type="submit" class="btn btn-outline-success" value="Donate">
+    </form>
+    <div class="btn-outline-warning badge" style="opacity: 0.7;"><h3>Pay on this number: {{ needy.payment_number }} using {{ needy.payment_option }}</h3></div>
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<section style="padding: 100px 0;">
+    <div class="container">
+        {% include 'alets.html' %}
+        <h1 style="text-align: center;"><span class="badge badge-info">Health</span></h1>
+        <h5 class="text-white" style="padding:15px 10px; background-color:peru;  "><span style="font-family:Georgia, 'Times New Roman', Times, serif;"> Health is the primary thing after which everything else follows. When you maintain good health, everything else falls into place. Health is real wealth. If someone is not capable of keepig them healthy because of lack of money then it becomes the duty of those who are capable to help him.</span></h5>
+        <div class="card-columns">
+                {% if needy %}
+                {% for need in needy %}
+                <div class="card">
+                <img class="card-img-top" src="{{ need.image.url }}" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">{{ need.name }}</h3>
+                  <h5 class="card-title">by {{ need.organization}}</h5>
+                  <p class="card-text">No. of people affected: {{need.no_of_people}} <br> Address: {{need.address}}  <br> Amount Needed: {{need.total_amount}}</p>
+                  <a class="card-text btn btn-outline-primary" href="{% url 'Needy' need.id %}" >More Details</a>
+                </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No Needy Pre{% extends 'base.html' %}
+{% block content %}
+<section style="padding: 100px 0;">
+    <div class="container">
+        {% include 'alets.html' %}
+        <h1 style="text-align: center;"><span class="badge badge-info">Health</span></h1>
+        <h5 class="text-white" style="padding:15px 10px; background-color:peru;  "><span style="font-family:Georgia, 'Times New Roman', Times, serif;"> Health is the primary thing after which everything else follows. When you maintain good health, everything else falls into place. Health is real wealth. If someone is not capable of keepig them healthy because of lack of money then it becomes the duty of those who are capable to help him.</span></h5>
+        <div class="card-columns">
+                {% if needy %}
+                {% for need in needy %}
+                <div class="card">
+                <img class="card-img-top" src="{{ need.image.url }}" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">{{ need.name }}</h3>
+                  <h5 class="card-title">by {{ need.organization}}</h5>
+                  <p class="card-text">No. of people affected: {{need.no_of_people}} <br> Address: {{need.address}}  <br> Amount Needed: {{need.total_amount}}</p>
+                  <a class="card-text btn btn-outline-primary" href="{% url 'Needy' need.id %}" >More Details</a>
+                </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No Needy Present</p>
+                {% endif %}    
+        </div>
+    </div>
+</section>
+{% endblock %}
